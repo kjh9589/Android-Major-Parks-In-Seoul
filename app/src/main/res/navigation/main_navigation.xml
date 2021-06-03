@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.teamnoyes.majorparksinseoul.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.teamnoyes.majorparksinseoul.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_parklistFragment"
+            app:destination="@id/parklistFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailParkFragment"
+            app:destination="@id/detailParkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parksFragment"
+        android:name="com.teamnoyes.majorparksinseoul.main.parks.ParksFragment"
+        android:label="ParksFragment" />
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.teamnoyes.majorparksinseoul.main.bookmark.BookmarkFragment"
+        android:label="BookmarkFragment" />
+    <fragment
+        android:id="@+id/parklistFragment"
+        android:name="com.teamnoyes.majorparksinseoul.main.parks.parklist.ParklistFragment"
+        android:label="parklist_fragment"
+        tools:layout="@layout/parklist_fragment" >
+        <argument
+            android:name="regionName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_parklistFragment_to_detailParkFragment"
+            app:destination="@id/detailParkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailParkFragment"
+        android:name="com.teamnoyes.majorparksinseoul.main.parks.parklist.detailpark.DetailParkFragment"
+        android:label="detail_park_fragment"
+        tools:layout="@layout/detail_park_fragment" >
+        <argument
+            android:name="regionName"
+            app:argType="string" />
+        <argument
+            android:name="pIdx"
+            app:argType="integer" />
+    </fragment>
+</navigation>

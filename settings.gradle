@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "서울시 우리 동네 공원"
