@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainEtc"
+    app:startDestination="@id/etcFragment">
+
+    <fragment
+        android:id="@+id/etcFragment"
+        android:name="com.teamnoyes.majorparksinseoul.etc.EtcFragment"
+        android:label="etc_fragment"
+        tools:layout="@layout/etc_fragment" />
+</navigation>

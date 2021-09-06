@@ -13,11 +13,6 @@
     <string name="seoulAPI">서울시 주요 공원현황</string>
     <string name="badgeImg">대한민국 지방자치단체의 기와 휘장 목록</string>
     <string name="findLoad">길찾기</string>
-    <string-array name="info">
-        <item>About Me</item>
-        <item>오픈소스 라이선스</item>
-        <item>API 및 라이선스</item>
-    </string-array>
 
     <string name="Apache_License">  "Apache License
                            Version 2.0, January 2004
@@ -220,4 +215,15 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License."</string>
+    <string name="zone">지역구</string>
+    <string name="bookmark">즐겨찾기</string>
+    <string name="etc">더보기</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_star">기본</string>
+    <string name="like_star">좋아요</string>
+    <string name="about_me">About Me</string>
+    <string name="OSS">오픈소스 라이선스</string>
+    <string name="api_and_license">API 및 라이선스</string>
+    <string name="plz_check_network">네트워크 연결을 확인해주세요.</string>
 </resources>

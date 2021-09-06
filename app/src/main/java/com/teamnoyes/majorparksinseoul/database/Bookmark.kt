@@ -3,6 +3,8 @@ package com.teamnoyes.majorparksinseoul.database
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.teamnoyes.majorparksinseoul.model.ModelPark
+import com.teamnoyes.majorparksinseoul.model.Row
 
 @Entity(tableName = "bookmark_table")
 data class Bookmark(
@@ -48,4 +50,15 @@ data class Bookmark(
     val TEMPLATE_URL: String,
     @ColumnInfo(name = "region_name")
     val RegionName: String
-)
+) {
+    companion object{
+        fun rowToBookmark(item: Row, zoneName: String) =
+            Bookmark(item.pIDX, item.pPARK, item.pLISTCONTENT, item.aREA,
+                item.oPENDT, item.mAINEQUIP, item.mAINPLANTS, item.gUIDANCE, item.vISITROAD, item.uSEREFER,
+                item.pIMG, item.pZONE, item.pADDR, item.pNAME, item.pADMINTEL, item.gLONGITUDE, item.gLATITUDE,
+                item.lONGITUDE, item.lATITUDE, item.tEMPLATEURL, zoneName)
+
+        fun bookmarkToModelPark(bookmark: Bookmark) =
+            ModelPark(bookmark.P_IDX, bookmark.P_PARK, bookmark.GUIDANCE, bookmark.P_ADDR, bookmark.RegionName ?: "")
+    }
+}

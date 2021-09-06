@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/detailPark_like"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_star_24"
-        android:title=""
+        android:icon="@drawable/favorite"
+        android:title="@string/like_star"
         app:showAsAction="ifRoom"
         />
 </menu>

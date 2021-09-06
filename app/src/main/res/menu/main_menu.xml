@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--메뉴의 아이디와 navigation의 아이디가 같아야 한다-->
+    <item
+        android:id="@+id/mainZones"
+        android:icon="@drawable/menu"
+        android:title="@string/zone"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/mainBookmark"
+        android:icon="@drawable/bookmark"
+        android:title="@string/bookmark"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/mainEtc"
+        android:icon="@drawable/more_horiz"
+        android:title="@string/etc"
+        app:showAsAction="ifRoom" />
+</menu>

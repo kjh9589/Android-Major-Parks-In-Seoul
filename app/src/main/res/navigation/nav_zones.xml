@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainZones"
+    app:startDestination="@id/zoneFragment">
+
+    <fragment
+        android:id="@+id/zoneFragment"
+        android:name="com.teamnoyes.majorparksinseoul.zone.ZoneFragment"
+        android:label="zone_fragment"
+        tools:layout="@layout/zone_fragment" >
+        <action
+            android:id="@+id/action_zoneFragment_to_parkListFragment"
+            app:destination="@id/parkListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkListFragment"
+        android:name="com.teamnoyes.majorparksinseoul.park_list.ParkListFragment"
+        android:label="fragment_park_list"
+        tools:layout="@layout/fragment_park_list" >
+        <argument
+            android:name="zoneName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_parkListFragment_to_detailParkFragment"
+            app:destination="@id/detailParkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailParkFragment"
+        android:name="com.teamnoyes.majorparksinseoul.detail_park.DetailParkFragment"
+        android:label="detail_park_fragment"
+        tools:layout="@layout/detail_park_fragment" >
+        <argument
+            android:name="pIdx"
+            app:argType="integer" />
+        <argument
+            android:name="zoneName"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
