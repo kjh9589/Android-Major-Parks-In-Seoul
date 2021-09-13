@@ -25,12 +25,15 @@
 |Category| - |
 | --- | --- |
 |Language|Kotlin|
-|Network|Retrofit|
+|Network|Retrofit2|
 |Jetpack|DataBinding|
 ||LiveData|
 ||Room|
 ||Navigation|
 
+# 1.1
+ * Navigation + BottomNavigationView
+ * Repository 패턴 적용
 
 # 개발 의의
  * 집에만 있는 요즘 기분 전환을 위한 산책 정보 및 집 근처 녹지 정보 제공
@@ -45,3 +48,6 @@
 ![screenshot2](https://user-images.githubusercontent.com/85272794/133020979-1df3466f-bb90-4215-8836-be59d904945c.jpg)
 ![screenshot3](https://user-images.githubusercontent.com/85272794/133020982-7f550379-9e97-4704-a015-7325d03de352.jpg)
 ![screenshot4](https://user-images.githubusercontent.com/85272794/133020983-dccc146c-06ae-4063-9c69-5f91295df9d1.jpg)
+
+# 동영상
+![video1](https://user-images.githubusercontent.com/85272794/133023002-6439c37e-6736-4116-a858-2c42cbb65a4c.mp4)
