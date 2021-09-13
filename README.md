@@ -50,4 +50,4 @@
 ![screenshot4](https://user-images.githubusercontent.com/85272794/133020983-dccc146c-06ae-4063-9c69-5f91295df9d1.jpg)
 
 # 동영상
-![video1](https://user-images.githubusercontent.com/85272794/133023105-4c8a2ffc-1006-4e9f-9fb7-e8d3d0304a96.gif)
+![video1](https://user-images.githubusercontent.com/85272794/133023327-b885c5e4-7c76-40d8-9eac-03a52085d055.gif)
