@@ -35,6 +35,15 @@
  * Navigation + BottomNavigationView
  * Repository 패턴 적용
 
+# 간단 설명
+ * SharedViewModel
+  전체 공원 정보들을 가지고 있는 클래스
+  MainActivity, ParkListFragment, DetailParkFragment에 사용
+ * ParkRepository
+  공공데이터 API 서버에서 공원 정보 불러오기, 로컬 데이터 베이스(Room)에서 정보 불러오기 및 asset 폴더에서 구별 정보 불러오기
+ * NetworkLiveData
+  사용자의 네트워크 상태를 체크하기 위한 object, WIFI 연결과 모바일 통신을 감지
+
 # 개발 의의
  * 집에만 있는 요즘 기분 전환을 위한 산책 정보 및 집 근처 녹지 정보 제공
  * Jetpack을 실서비스에 적용
@@ -50,4 +59,4 @@
 ![screenshot4](https://user-images.githubusercontent.com/85272794/133020983-dccc146c-06ae-4063-9c69-5f91295df9d1.jpg)
 
 # 동영상
-![video1](https://user-images.githubusercontent.com/85272794/133023327-b885c5e4-7c76-40d8-9eac-03a52085d055.gif)
+![video1](https://user-images.githubusercontent.com/85272794/133025893-157da8cf-142b-4ed8-a3ec-f928fbebdc28.gif)
