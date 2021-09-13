@@ -43,6 +43,22 @@
   공공데이터 API 서버에서 공원 정보 불러오기, 로컬 데이터 베이스(Room)에서 정보 불러오기 및 asset 폴더에서 구별 정보 불러오기
  * NetworkLiveData
   사용자의 네트워크 상태를 체크하기 위한 object, WIFI 연결과 모바일 통신을 감지
+  
+# 개발 시 고려사항
+  * 사용자가 어플을 사용 시 네트워크가 끊어져 있다면?
+    * 이 어플은 사용자의 네트워크가 연결되어 있지 않다면 즐겨찾기에 저장된 공원들을 제외하고는 각 구별 공원을 볼 수가 없다.
+    * 공원 정보는 어플 사용시에 한 번 전부 받아오는 상황이다. 받아오는 시점은 사용자가 처음 어플에 들어올 시 받아온다.
+    * 안전하게 모든 공원 정보를 방아오기 위해 사용자에게 Logo 화면을 보여주면서 네트워크가 연결되어 있고, 공원 정보를 전부 받았을 시 메인 화면으로 이동하는 방식을 해결책으로 생각했다.
+    * 네트워크를 감지하기 위해 ConnectivityManger를 사용하고, 이를 LiveData와 결합하여 네트워크 변경 상황을 알 수 있게 했다(NetworkLiveData).
+    * NetworkLiveData가 true 상태일 때 공공데이터 API 서버에 공원 정보를 요청하고 공원 정보들을 완전히 받은 경우에 메인 화면으로 넘어간다.
+    * 만약 NetworkLiveData가 true인 상태에서 공원정보를 받는 도중 NetworkLiveData가 false가 되면 공원 정보를 완전히 받지 않았기에 메인 화면으로 넘어가지 않고 다시 네트워크가 연결되기를 기다린다.
+   <br>
+  * API 키를 어떻게 숨길까?
+    * 이 어플은 Naver Map API와 서울시 공공데이터 서울시 주요 공원현황 API를 사용한다.
+    * 프로젝트를 GitHub에 올리기 때문에 API 키를 그대로 사용 시 타인에게 노출될 우려가 있다.
+    * 이를 해결하기 위해 gitignore에 등록되어 있는 local.properties를 이용하여 해당 파일 내에 API키들을 입력해놓았다.
+    * Naver Map API 키는 Manifest 파일에 meta-data에서 사용되므로 build.gradle(app)에서 manifestPlaceholders를 이용하여 local.properties에 있는 키를 불러와 사용한다.
+    * 서울시 공공데이터 서울시 주요 공원현황 API는 Retrofit2를 이용하여 호출하기에 키를 build.gradle(app)에서 buildConfigField를 이용하여 local.properties에 있는 키를 불러와 사용한다.
 
 # 개발 의의
  * 집에만 있는 요즘 기분 전환을 위한 산책 정보 및 집 근처 녹지 정보 제공
