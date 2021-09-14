@@ -29,6 +29,8 @@
 ||LiveData|
 ||Room|
 ||Navigation|
+||ViewModel|
+|Async|Coroutine|
 
 # 1.1
  * Navigation + BottomNavigationView
